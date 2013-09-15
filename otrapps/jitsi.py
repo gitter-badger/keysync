@@ -144,22 +144,22 @@ class JitsiProperties():
             if 'x' in key:
                 suffix2 = ''
                 if '@' in key['name']:
-		    suffix = re.sub('[^a-zA-Z0-9_]', '_', key['name'].split('@')[1])
+                    suffix = re.sub('[^a-zA-Z0-9_]', '_', key['name'].split('@')[1])
                     if 'facebook' in key['name'].split('@')[1]:
                         protocolAcc = 'Facebook_'
                     elif 'gmail' in key['name'].split('@')[1]:
-		        protocolAcc = 'Google_Talk_'
-			suffix2 = 'talk_google_com'
+                        protocolAcc = 'Google_Talk_'
+                        suffix2 = 'talk_google_com'
                     else:
-		        protocolAcc = 'Jabber_'
+                        protocolAcc = 'Jabber_'
                 elif '@' not in key['name']:
-	            if 'icq' in key['protocol']:
+                    if 'icq' in key['protocol']:
                         protocolAcc = 'ICQ_'
                         suffix = 'icq_com'
                     elif 'yahoo' in key['protocol']:
                         protocolAcc = 'Yahoo__'
                         suffix = 'yahoo_com'
-                   # Writing
+                # Writing
                 pubkey = (propkey_base + protocolAcc + re.sub('[^a-zA-Z0-9_]', '_', key['name'])
                           + '_' + suffix + '_publicKey')
                 p.setProperty(pubkey, util.ExportDsaX509(key))
