@@ -2,6 +2,8 @@
 KeySync - One key for all of your chat apps
 ===========================================
 
+[![Join the chat at https://gitter.im/tabkram/keysync](https://badges.gitter.im/tabkram/keysync.svg)](https://gitter.im/tabkram/keysync?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 There are many chat apps that support OTR encryption for verifying messages.
 Many of us use multiple chat apps, including one for desktop and another for
 mobile, or one for Mac OS X and another for GNU/Linux or Windows.  The trust
